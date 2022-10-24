@@ -1,0 +1,110 @@
+*{
+  font-family: monospace;
+}
+body{
+
+}
+h3{
+  color:black;
+  font-family: monospace;
+  text-align: center;
+  font-size: 30px;
+}
+.content{
+}
+.header{
+  background-color: black;
+  color: white;
+}
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 62%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 5px solid #8806CE; /* Add a grey border */
+  margin-left: 10%;
+  border-radius: 12px;/* Add some space below the input */
+}
+table {
+  border: 1px solid #FE2937;
+  border-collapse: collapse;
+  margin: 10%;
+  padding: 0;
+  width: 80%;
+  table-layout: fixed;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 2px solid #FE2937;
+  padding: .35em;
+}
+table tr:hover{
+  background-color: #FE2937;
+  color: white;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+  font-size: 15px;
+}
+
+table th {
+  font-size: 15px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.6em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+    font-size: 15px;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}

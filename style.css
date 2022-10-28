@@ -69,12 +69,26 @@ html {
 .landing{
   color: white;
   margin-top: 10%;
-  font-size: 50px;
+
 }
 .landing h1{
-  font-size: 120px;
+  font-size: 150px;
   color:  #FE2937;
   font-family: 'Russo One', sans-serif;
+}
+.landing h2{
+  font-size: 50px;
+  font-family: 'Russo One', sans-serif;
+}
+@media screen and (max-width: 600px){
+
+    .landing h1{
+      font-size:120px;
+    }
+    .landing h2{
+      font-size: 40px;
+    }
+
 }
 /* --------------------------hero section end------------------------- */
 /* ----------------------------about us start--------------------------- */

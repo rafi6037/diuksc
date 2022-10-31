@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Department of Software Engineering</title>
+    <link rel="stylesheet" href="cse.css">
+    <script src="https://kit.fontawesome.com/bcdbd834f9.js" crossorigin="anonymous"></script>
+    <style>
+    *{
+      font-family: monospace;
+    }
+    body{
+
+    }
+    h3{
+      color:black;
+      font-family: monospace;
+      text-align: center;
+      font-size: 30px;
+    }
+    .content{
+    }
+    .header{
+      background-color: black;
+      color: white;
+    }
+    .title{
+      text-align: center;
+      font-size: 15px;
+      color: #524A4E;
+    }
+    #myInput{
+      border-radius: 5px;
+      background-color: white;
+      color: black;
+      width: auto;
+      padding:8px;
+      margin-left: 10%;
+      margin-bottom: 20px;
+    }
+    table {
+      border: 1px solid #FE2937;
+      border-collapse: collapse;
+      margin-left: 10%;
+      padding: 0;
+      width: 80%;
+      table-layout: fixed;
+    }
+
+    table tr {
+      background-color: #f8f8f8;
+      border: 2px solid #FE2937;
+      padding: .35em;
+    }
+    table tr:hover{
+      background-color: #FE2937;
+      color: white;
+    }
+
+    table th,
+    table td {
+      padding: .625em;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    table th {
+      font-size: 15px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    @media screen and (max-width: 600px) {
+      table {
+        border: 0;
+      }
+
+      table caption {
+        font-size: 1.6em;
+      }
+
+      table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+
+      table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+      }
+
+      table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+        font-size: 15px;
+      }
+
+      table td::before {
+        /*
+        * aria-label has no advantage, it won't be read inside a table
+        content: attr(aria-label);
+        */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      table td:last-child {
+        border-bottom: 0;
+      }
+    }
+
+
+    button{
+      padding: 5px;
+      border-radius: 5px;
+      background:black;
+      color: white;
+      width: 72px;
+    }
+    button:hover{
+      background: white;
+      color: black;
+    }
+    a{
+
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h3>Department of Software Engineering</h3>
+      <p class="title">Select your course by course name or course code or you can search your course by course code.And download your
+      zip file by choosing Mid/Final examination question.</p>
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter Course Code..">
+
+<table id="myTable">
+  <thead>
+    <tr class="header">
+      <th scope="col">Course Code</th>
+      <th scope="col">Course Name</th>
+      <th scope="col">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+  <td data-label="code">SE 111</td>
+<td data-label="name">Computer Fundamentals</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 112</td>
+<td data-label="name">Computer Fundamentals Lab</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 113</td>
+<td data-label="name">Introduction to Software Engineering</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">ENG 114 / ENG 101</td>
+<td data-label="name">English Reading, Writing Skills & Public Speaking / English I</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">AOL101</td>
+<td data-label="name">Art of Living</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 121</td>
+<td data-label="name">Structured Programming</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 122</td>
+<td data-label="name">Structured Programming Lab</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 123</td>
+<td data-label="name">Discrete Mathematics</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">MAT 124 / MAT 101</td>
+<td data-label="name">Math-I: Calculus & Geometry/ Mathematics I</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">PHY 125 / PHY 101</td>
+<td data-label="name">Physics: Mechanics, Electromagnetism & Waves / Physics I</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 133</td>
+<td data-label="name">Software Development Capstone Project</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 131</td>
+<td data-label="name">Data Structure</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 132</td>
+<td data-label="name">Data Structure Lab</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">MAT 134 / MAT 102</td>
+<td data-label="name">Math-II: Linear Algebra & Fourier Analysis / Mathematics II</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">STA 135 / STA 101</td>
+<td data-label="name">Probability & Statistics in Software Engineering / Statistics I</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 211</td>
+<td data-label="name">Object Oriented Concepts</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 212</td>
+<td data-label="name">Software Requirement Specifications & Analysis</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 213</td>
+<td data-label="name">Digital Electronics & Logic Design</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 214</td>
+<td data-label="name">Algorithms Design & Analysis</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 215</td>
+<td data-label="name">Algorithms Design & Analysis Lab</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 221</td>
+<td data-label="name">Object Oriented Design</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 222</td>
+<td data-label="name">Computer Architecture</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 223</td>
+<td data-label="name">Database System</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 224</td>
+<td data-label="name">Database System Lab</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 532 / SE XXX</td>
+<td data-label="name">Introduction to Robotics (G-1) / Guided Elective- I</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 231</td>
+<td data-label="name">System Analysis & Design Capstone Project</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 232</td>
+<td data-label="name">Operating System & System Programming</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 233</td>
+<td data-label="name">Operating System & System Programming Lab</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 234</td>
+<td data-label="name">Theory of Computing</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 225</td>
+<td data-label="name">Data Communication & Computer Networking</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+<tr>
+  <td data-label="code">SE 226</td>
+<td data-label="name">Data Communication & Computer Networking Lab</td>
+<td data-label="link"> <a href="#"> <button type="button" name="button">Mid</button></a> <a href="#"> <button type="button" name="button">Final</button></a></td>
+</tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+  </body>
+</html>
